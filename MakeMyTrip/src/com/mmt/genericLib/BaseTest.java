@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeClass;
 public class BaseTest implements IAutoConsts{
 
 	public static WebDriver driver;
-
-	public void openBrowser() throws IOException
+@BeforeClass
+	public void openBrowser() throws Throwable
 	{
 	FileLib flib=new FileLib();
 String browser = flib.getPropValue(PROP_PATH, "browser");
